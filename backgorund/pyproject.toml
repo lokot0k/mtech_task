@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mtech-backgorund"
+version = "0.1.0"
+description = "background service for mtech"
+authors = ["lokot0k"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic-settings = "^2.1.0"
+requests = "^2.31.0"
+filelock = "^3.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
