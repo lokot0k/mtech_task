@@ -26,7 +26,7 @@ class LogRead(BaseModel):
 
 
 class LogInput(BaseModel):
-    log_str: str
+    log: str
 
 
 @dataclass

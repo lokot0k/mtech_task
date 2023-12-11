@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "backend"
+name = "mtech_backend"
 version = "1.0"
 description = "backend service for logs"
 authors = ["lokot0k"]

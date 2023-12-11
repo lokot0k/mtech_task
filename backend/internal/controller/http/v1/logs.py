@@ -36,7 +36,7 @@ async def create_log(
     res.status_code = 418
     response = HTTP_418_SOMETHING_IS_WRONG
     try:
-        ip, method, uri, status_code = input_log_str.log_str.split()
+        ip, method, uri, status_code = input_log_str.log.split()
         dto = BaseLog(ip=ip, method=method, uri=uri, status_code=status_code)
         await log_service.create(dto)
         res.status_code = 201
