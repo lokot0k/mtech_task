@@ -29,6 +29,17 @@ services:
       - network
     ports:
       - ${HOST_BACKEND_PORT}:${BACKEND_PORT}
+      
+  client:
+    build:
+      context: client/
+      dockerfile: Dockerfile
+    container_name: mtech_client
+    depends_on:
+      - backend
+    networks:
+      - network
+
 
 networks:
   network:

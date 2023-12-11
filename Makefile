@@ -12,5 +12,4 @@ export
 .SILENT:
 .PHONY: compose-up
 compose-up: ## Create and start containers
-	echo $(ENV_FILE)
 	docker-compose -f docker-compose.yml --env-file backend/docker/$(ENV_FILE) up -d
