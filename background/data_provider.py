@@ -10,7 +10,6 @@ class DataProvider:
         self.date_from = datetime.datetime.fromtimestamp(0)
 
     def fetch_data(self):
-        resp = None
         try:
             resp = requests.get(url=self.url,
                                 params={
@@ -19,4 +18,6 @@ class DataProvider:
             self.date_from = datetime.datetime.now()
         except RequestException as e:
             print('Can\'t fetch data:', e)
+            return None
+
         return str(resp.json())
