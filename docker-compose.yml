@@ -40,6 +40,18 @@ services:
     networks:
       - network
 
+  background:
+    build:
+      context: background/
+      dockerfile: Dockerfile
+    container_name: mtech_background
+    depends_on:
+      - backend
+    networks:
+      - network
+    volumes:
+      - background_data:/shared/data
+
 
 networks:
   network:
@@ -47,3 +59,4 @@ networks:
 
 volumes:
   db_data:
+  background_data:

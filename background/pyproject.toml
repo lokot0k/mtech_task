@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mtech-backgorund"
+name = "mtech-background"
 version = "0.1.0"
 description = "background service for mtech"
 authors = ["lokot0k"]
