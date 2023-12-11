@@ -18,13 +18,13 @@ services:
 
   backend:
     build:
-      context: ..
-      dockerfile: docker/Dockerfile.backend
-    container_name: backend
+      context: backend/
+      dockerfile: docker/Dockerfile
+    container_name: mtech_backend
     depends_on:
       - db
     env_file:
-      - ${ENV_FILE}
+      - backend/${ENV_FILE}
     networks:
       - network
     ports:

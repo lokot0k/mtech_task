@@ -29,6 +29,6 @@ class Worker(threading.Thread):
         body = {'log': data}
         try:
             requests.post(self.url, json=body)
-        except RequestException:
-            print("Service is unavailable")
+        except RequestException as e:
+            print("Service is unavailable", e)
             exit(0)
