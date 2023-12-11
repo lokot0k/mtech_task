@@ -30,5 +30,4 @@ class Worker(threading.Thread):
         try:
             requests.post(self.url, json=body)
         except RequestException as e:
-            print("Service is unavailable", e)
-            exit(0)
+            print("Service is unavailable:", e)

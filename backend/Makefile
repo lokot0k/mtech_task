@@ -35,7 +35,6 @@ lint: ## Run linters
 
 .PHONY: run
 run: ## Run applications
-	make migrate-create name=initial
 	make migrate-up
 	make -j 2 run-backend
 
